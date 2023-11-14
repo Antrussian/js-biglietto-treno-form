@@ -23,6 +23,10 @@ Potete scegliere di implementare una soluzione completamente diversa oppure simi
 const prezzoKm = 0.1976;
 
 
+const scontoMinorenne = 17.65;
+
+const scontoOver= 53.27;
+
 
 document.getElementById("genera").addEventListener("click", function() {
 
@@ -30,7 +34,7 @@ document.getElementById("genera").addEventListener("click", function() {
  
 const numeroKm = parseFloat(document.getElementById('numeroKm').value);
 
-const etaPasseggero = parseFloat (document.getElementById('etaPasseggero').value);
+const etaPasseggero = parseFloat (document.getElementById('age-group').value);
 
 const userName = document.getElementById("userName").value;  
 
@@ -45,9 +49,6 @@ const minorenne = 18;
 const over = 65;
 
 
-let scontoMinorenne = 17.65;
-
-let scontoOver= 53.27;
 
 let utenteMinorenne = etaPasseggero <= minorenne;
 
@@ -57,21 +58,23 @@ let utenteOver = etaPasseggero >= over;
 
 let prezzoTotale;
 
-if ( utenteMinorenne) {
+if ( etaPasseggero === 1 ) {
 
     let ImportoScontoMinorenne = (imponibile * scontoMinorenne/100) ;
     prezzoTotale = (imponibile - ImportoScontoMinorenne);
 }
 
-else if ( utenteOver) {
+else if ( etaPasseggero === 3 ) {
 
     let ImportoScontoOver = (imponibile * scontoOver/100) ;
     prezzoTotale = (imponibile - ImportoScontoOver);
 }
 
-else  {
+else  { (etaPasseggero === 2 )
     prezzoTotale = imponibile;
 }
+
+
     let codiceBiglietto = Math.floor (Math.random() *100000 +1);
 
 
