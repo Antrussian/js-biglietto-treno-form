@@ -23,16 +23,24 @@ Potete scegliere di implementare una soluzione completamente diversa oppure simi
 const prezzoKm = 0.1976;
 
 
+
 document.getElementById("genera").addEventListener("click", function() {
+
+  
  
 const numeroKm = parseFloat(document.getElementById('numeroKm').value);
 
 const etaPasseggero = parseFloat (document.getElementById('etaPasseggero').value);
+
+const userName = document.getElementById("userName").value;  
+
     
 let imponibile = (numeroKm * prezzoKm);
 
 
 const minorenne = 18;
+
+ 
 
 const over = 65;
 
@@ -64,11 +72,23 @@ else if ( utenteOver) {
 else  {
     prezzoTotale = imponibile;
 }
+    let codiceBiglietto = Math.floor (Math.random() *100000 +1);
 
 
-    console.log("Numero di chilometri: " + numeroKm);
-    console.log("Età del passeggero: " + etaPasseggero);
-    console.log("Prezzo totale del biglietto: " + prezzoTotale.toFixed(2) + " €");
+    let coach = Math.floor (Math.random() *100000 +1);
+
+
+
+    document.getElementById('carrozza').innerHTML = '' + coach;
+
+    document.getElementById('codice_Biglietto').innerHTML = '' + codiceBiglietto;
+
+    document.getElementById('user_name').innerHTML = '' + userName;
+
+    document.getElementById('prezzoFinale').innerHTML = '' + prezzoTotale.toFixed(2) + ' €';
+
+ 
+
 });
 
 
