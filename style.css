@@ -65,3 +65,15 @@ h3{
     font-size: 25px;
     color: rgb(97, 97, 97);
 }
+
+._text-black {
+    color: rgb(52, 52, 52);
+}
+
+._text-green {
+    color: rgb(34, 166, 16);
+}
+
+._text-orange {
+    color: rgb(255, 123, 14);
+}

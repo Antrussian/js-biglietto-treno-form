@@ -62,16 +62,19 @@ if ( etaPasseggero === 1 ) {
 
     let ImportoScontoMinorenne = (imponibile * scontoMinorenne/100) ;
     prezzoTotale = (imponibile - ImportoScontoMinorenne);
+    prezzoFinale.className = '_text-green';
 }
 
 else if ( etaPasseggero === 3 ) {
 
     let ImportoScontoOver = (imponibile * scontoOver/100) ;
     prezzoTotale = (imponibile - ImportoScontoOver);
+    prezzoFinale.className = '_text-orange';
 }
 
 else  { (etaPasseggero === 2 )
     prezzoTotale = imponibile;
+    prezzoFinale.className = '_text-black';
 }
 
 
@@ -82,11 +85,12 @@ else  { (etaPasseggero === 2 )
 
 
 
-    document.getElementById('carrozza').innerHTML = '' + coach;
+    carrozza.innerHTML = coach;
 
-    document.getElementById('codice_Biglietto').innerHTML = '' + codiceBiglietto;
+    codice_Biglietto.innerHTML = codiceBiglietto;
 
-    document.getElementById('user_name').innerHTML = '' + userName;
+    user_name.innerHTML = userName;
+
 
     document.getElementById('prezzoFinale').innerHTML = '' + prezzoTotale.toFixed(2) + ' €';
 
