@@ -75,7 +75,7 @@ else  {
     let codiceBiglietto = Math.floor (Math.random() *100000 +1);
 
 
-    let coach = Math.floor (Math.random() *100000 +1);
+    let coach = Math.floor (Math.random() *10 +1);
 
 
 
